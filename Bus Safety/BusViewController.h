@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAI.h"
 
-@interface BusViewController : UIViewController
+@interface BusViewController : GAITrackedViewController
+@property (weak, nonatomic) IBOutlet UIButton *ezRiderTopButton;
+- (IBAction)infoButtonPressed:(id)sender;
 
 @end

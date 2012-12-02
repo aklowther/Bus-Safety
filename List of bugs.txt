@@ -1,0 +1,2 @@
+companySearchBar errs out the program if there is an invalid search
+	ie company doesn't exist or your search isn't long enough

@@ -8,16 +8,21 @@
 
 #import "BusViewController.h"
 
-@interface BusViewController ()
-
+@interface BusViewController () <UINavigationControllerDelegate>
 @end
 
 @implementation BusViewController
+@synthesize ezRiderTopButton;
+
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.trackedViewName = @"Home";
+    self.navigationController.navigationBarHidden = FALSE;
+    self.navigationController.delegate = self;
+    self.ezRiderTopButton.enabled = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -26,4 +31,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    //(search *)viewController.bool = YES
+}
+
+- (void)viewDidUnload {
+    [self setEzRiderTopButton:nil];
+    [super viewDidUnload];
+}
+
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    destinationView = [segue destinationViewController];
+//    destinationView.importedURL = @"http://www.google.com";
+//
+//}
 @end

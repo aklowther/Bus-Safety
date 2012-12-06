@@ -217,12 +217,10 @@
 }
 
 - (UIView*)viewForZoomingInScrollView:(UIScrollView *)scrollView {
-    // Return the view that we want to zoom
     return self.containerView;
 }
 
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView {
-    // The scroll view has zoomed, so we need to re-center the contents
     [self centerScrollViewContents];
 }
 
@@ -275,7 +273,6 @@
 -(NSInteger)checkForZero:(NSInteger)intPassedFromOtherPlace{
     NSLog(@"%i", intPassedFromOtherPlace);
     if(intPassedFromOtherPlace == 0){
-        //NSLog(@"Dude");
         return 1;
     }else{
         return intPassedFromOtherPlace;
@@ -295,7 +292,6 @@
         return 3;
     }
 }
-
 
 -(void)percentInfoButtonPressed:(UIButton *)sender{
     switch (sender.tag) {
